@@ -1,4 +1,4 @@
-import "./list-review";
+import './list-review';
 
 class ReviewMenuTag extends HTMLElement {
   set reviews(reviews) {
@@ -21,7 +21,7 @@ class ReviewMenuTag extends HTMLElement {
         <list-review class="reviews"></list-review>
       </div>
     `;
-    
+
     const reviewElement = document.querySelector('list-review');
     reviewElement.reviews = this._reviews;
   }

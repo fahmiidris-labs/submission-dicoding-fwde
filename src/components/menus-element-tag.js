@@ -1,4 +1,4 @@
-import "./list-menu";
+import './list-menu';
 
 class MenusElementTag extends HTMLElement {
   set menus(menus) {

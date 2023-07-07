@@ -1,19 +1,17 @@
 {
   "env": {
+    "node": true,
     "browser": true,
-    "es2021": true,
-    "node": true
+    "es2021": true
   },
-  "extends": ["airbnb-base", "prettier"],
+  "extends": "airbnb-base",
   "parserOptions": {
-    "ecmaVersion": 13,
-    "sourceType": "module"
+    "ecmaVersion": "latest"
   },
   "rules": {
     "no-console": 0,
     "linebreak-style": 0,
     "no-tabs": 0,
-    "no-underscore-dangle": 0,
-    "eslint-disable  ": "indent"
+    "no-underscore-dangle": 0
   }
 }

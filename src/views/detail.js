@@ -1,7 +1,7 @@
 import '../components/detail-food';
 import FavoriteButtonInitiator from '../components/favorite-button';
-import '../components/menus-element-tag'
-import '../components/reviews-element-tag'
+import '../components/menus-element-tag';
+import '../components/reviews-element-tag';
 
 import { getFoodById } from '../data/foods';
 
@@ -36,14 +36,14 @@ const Detail = {
     FavoriteButtonInitiator.init({
       likeButtonContainer: document.querySelector('#button-favorite-container'),
       food: {
-          id: food.restaurant.id,
-          name: food.restaurant.name,
-          pictureId: food.restaurant.pictureId,
-          city: food.restaurant.city,
-          rating: food.restaurant.rating,
-          description: food.restaurant.description,
-      }
-  });
+        id: food.restaurant.id,
+        name: food.restaurant.name,
+        pictureId: food.restaurant.pictureId,
+        city: food.restaurant.city,
+        rating: food.restaurant.rating,
+        description: food.restaurant.description,
+      },
+    });
   },
 };
 

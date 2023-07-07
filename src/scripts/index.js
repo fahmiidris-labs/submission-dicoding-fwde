@@ -22,7 +22,7 @@ mainElement.addEventListener('click', (event) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   main();
-  swRegister()
+  swRegister();
 });
 
 window.addEventListener('hashchange', () => {

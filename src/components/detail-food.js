@@ -32,9 +32,7 @@ class DetailFood extends HTMLElement {
 
       <div class="container">
         <div>
-          <img class="banner" src="${
-            BASE_URL_IMAGE + this._food.pictureId
-          }" alt="Restaurant ${this._food.name}" />
+          <img class="banner" src="${BASE_URL_IMAGE + this._food.pictureId}" alt="Restaurant ${this._food.name}" />
 
           <div>
             <h2>${this._food.name} - ${this._food.city} - ${this._food.address}</h2>

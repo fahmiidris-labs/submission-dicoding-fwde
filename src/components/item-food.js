@@ -45,9 +45,7 @@ class ItemFood extends HTMLElement {
       </style>
 
       <div class="card">
-        <img class="card-image" src="${
-          BASE_URL_IMAGE + this._food.pictureId
-        }" alt="Baner Restaurant ${this._food.name}" />
+        <img class="card-image" src="${BASE_URL_IMAGE + this._food.pictureId}" alt="Baner Restaurant ${this._food.name}" />
 
         <div class="card-body">
           <h2>${this._food.name}</h2>

@@ -10,18 +10,10 @@ const idbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
   },
 });
 
-export const getFoodById = async (id) => {
-  return (await idbPromise).get(OBJECT_STORE_NAME, id);
-};
+export const getFoodById = async (id) => (await idbPromise).get(OBJECT_STORE_NAME, id);
 
-export const getFoods = async () => {
-  return (await idbPromise).getAll(OBJECT_STORE_NAME);
-};
+export const getFoods = async () => (await idbPromise).getAll(OBJECT_STORE_NAME);
 
-export const putFood = async (restaurant) => {
-  return (await idbPromise).put(OBJECT_STORE_NAME, restaurant);
-};
+export const putFood = async (restaurant) => (await idbPromise).put(OBJECT_STORE_NAME, restaurant);
 
-export const deleteFood = async (id) => {
-  return (await idbPromise).delete(OBJECT_STORE_NAME, id);
-};
+export const deleteFood = async (id) => (await idbPromise).delete(OBJECT_STORE_NAME, id);
