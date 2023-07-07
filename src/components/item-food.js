@@ -1,3 +1,5 @@
+import { BASE_URL_IMAGE } from '../config/api';
+
 class ItemFood extends HTMLElement {
   constructor() {
     super();
@@ -43,7 +45,9 @@ class ItemFood extends HTMLElement {
       </style>
 
       <div class="card">
-        <img class="card-image" src="${this._food.pictureId}" alt="Baner Restaurant ${this._food.name}" />
+        <img class="card-image" src="${
+          BASE_URL_IMAGE + this._food.pictureId
+        }" alt="Baner Restaurant ${this._food.name}" />
 
         <div class="card-body">
           <h2>${this._food.name}</h2>
@@ -53,7 +57,7 @@ class ItemFood extends HTMLElement {
             ${this._food.description}
           </p>
 
-          <a href="#">
+          <a href="#/detail/${this._food.id}">
             View Detail
           </a>
         </div>

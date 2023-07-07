@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+.button-add-to-favorite {
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.button-remove-from-favorite {
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+#button-favorite-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
 .skip-link {
   position: absolute;
   top: -40px;
@@ -37,6 +55,7 @@ main {
 }
 
 main {
+  padding-top: 24px;
   padding-bottom: 48px;
 }
 
@@ -48,7 +67,7 @@ main {
 
 /* Banner */
 .banner-container {
-  margin: 12px 0;
+  margin-bottom: 12px;
 }
 
 .banner {

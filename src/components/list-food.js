@@ -1,5 +1,4 @@
-import './item-food.js';
-import DATA from '../DATA.json';
+import './item-food';
 
 class ListFood extends HTMLElement {
   constructor() {
@@ -24,4 +23,4 @@ class ListFood extends HTMLElement {
   }
 }
 
-customElements.define('list-food', ListFood, );
+customElements.define('list-food', ListFood);

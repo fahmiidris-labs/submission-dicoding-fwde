@@ -4,20 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="manifest" />
+
     <title>Restaurant Apps Starter Project</title>
     <meta name="description" content="Restaurant Apps" />
   </head>
   <body class="container">
     <a href="#content" class="skip-link">Skip To Content</a>
+
     <nav>
-      <a href="/" id="logo">Back Food</a>
+      <a href="#/" id="logo">Back Food</a>
 
       <ul class="menu">
         <li>
-          <a href="/" class="nav-link">Home</a>
+          <a href="#/" class="nav-link">Home</a>
         </li>
         <li>
-          <a href="#" class="nav-link">Favorite</a>
+          <a href="#/favorites" class="nav-link">Favorite</a>
         </li>
         <li>
           <a
@@ -31,26 +35,13 @@
         </li>
       </ul>
 
-      <button type="button" id="hamburger" aria-label="Hamburger Button">☰</button>
+      <button type="button" id="hamburger" aria-label="Hamburger Button">
+        ☰
+      </button>
     </nav>
 
-    <main>
-      <div class="banner-container">
-        <img
-          src="./images/heros/hero-image_2.jpg"
-          alt="Banner"
-          class="banner"
-        />
-      </div>
+    <main id="content"></main>
 
-      <div id="content">
-        <h2 class="title">Explore Restaurant</h2>
-        <list-food></list-food>
-      </div>
-    </main>
-
-    <footer>
-      Copyright © 2020 - Back Food Apps
-    </footer>
+    <footer>Copyright © 2020 - Back Food Apps</footer>
   </body>
 </html>
