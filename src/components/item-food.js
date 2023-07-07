@@ -41,6 +41,9 @@ class ItemFood extends HTMLElement {
 
         .card-body > a {
           color: #1e293b;
+          font-size: 20px;
+          padding: 10px 0;
+          line-height: 44px;
         }
       </style>
 
