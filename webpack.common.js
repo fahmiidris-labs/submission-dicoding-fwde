@@ -35,13 +35,16 @@ module.exports = {
       short_name: 'Restaurant App',
       description: 'Restaurant Web App No. 1',
       background_color: '#FFFFFF',
-      start_url: "./index.html",
+      theme_color: '#1e293b',
+      start_url: './index.html',
+      publicPath: '/',
       crossorigin: null,
       includeDirectory: true,
       icons: [
         {
           src: path.resolve('src/public/icons/icon.png'),
           sizes: [96, 128, 192, 256, 384, 512],
+          purpose: "any maskable"
         },
       ],
     }),
