@@ -1,9 +1,8 @@
-import FavoriteIDB from '../data/favorites';
-
-const FavoriteButtonInitiator = {
-  async init({ likeButtonContainer, food }) {
+const FavoriteButtonPresenter = {
+  async init({ likeButtonContainer, food, favoriteFoods }) {
     this._likeButtonContainer = likeButtonContainer;
     this._food = food;
+    this._favoriteFoods = favoriteFoods;
 
     await this._renderButton();
   },
@@ -19,7 +18,7 @@ const FavoriteButtonInitiator = {
   },
 
   async _isFoodExist(id) {
-    const food = await FavoriteIDB.getFoodById(id);
+    const food = await this._favoriteFoods.getFoodById(id);
 
     return !!food;
   },
@@ -34,7 +33,7 @@ const FavoriteButtonInitiator = {
     const likeButton = document.querySelector('.button-add-to-favorite');
 
     likeButton.addEventListener('click', async () => {
-      await FavoriteIDB.putFood(this._food);
+      await this._favoriteFoods.putFood(this._food);
       this._renderButton();
     });
   },
@@ -48,10 +47,10 @@ const FavoriteButtonInitiator = {
 
     const likeButton = document.querySelector('.button-remove-from-favorite');
     likeButton.addEventListener('click', async () => {
-      await FavoriteIDB.deleteFood(this._food.id);
+      await this._favoriteFoods.deleteFood(this._food.id);
       this._renderButton();
     });
   },
 };
 
-export default FavoriteButtonInitiator;
+export default FavoriteButtonPresenter;

@@ -1,6 +1,6 @@
 import '../components/list-food';
 
-import { getFoods } from '../data/favorites';
+import FavoriteIDB from '../data/favorites';
 
 const Favorite = {
   async render() {
@@ -15,7 +15,7 @@ const Favorite = {
   },
 
   async afterRender() {
-    const foods = await getFoods();
+    const foods = await FavoriteIDB.getFoods();
 
     const listFoodElement = document.querySelector('list-food');
     listFoodElement.foods = { restaurants: foods };

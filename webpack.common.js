@@ -3,6 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const ImageminMozjpeg = require('imagemin-mozjpeg');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: {
@@ -44,7 +47,7 @@ module.exports = {
         {
           src: path.resolve('src/public/icons/icon.png'),
           sizes: [96, 128, 192, 256, 384, 512],
-          purpose: "any maskable"
+          purpose: 'any maskable',
         },
       ],
     }),
@@ -62,6 +65,17 @@ module.exports = {
           to: path.resolve(__dirname, 'dist/'),
         },
       ],
+    }),
+    new ImageminWebpackPlugin({
+      plugins: [
+        ImageminMozjpeg({
+          quality: 50,
+          progressive: true,
+        }),
+      ],
+    }),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'disabled',
     }),
   ],
 };
