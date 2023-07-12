@@ -7,11 +7,17 @@ const List = {
     return `
       <div>
         <div class="banner-container">
-          <img
-            src="./images/heros/hero-image_2.jpg"
-            alt="Banner"
-            class="banner"
-          />
+          <picture>
+            <source media="(max-width: 425px)" srcset="./images/hero-image_2-small.jpg">
+            <source media="(max-width: 768px)" srcset="./images/hero-image_2-large.jpg">
+            
+            <img
+              class="banner lazyload"
+              data-src="./images/hero-image_2-large.jpg"
+              alt="Banner"
+              class="banner"
+            />
+          </picture>
         </div>
 
         <div>

@@ -1,16 +1,11 @@
 class ItemReview extends HTMLElement {
-  constructor() {
-    super();
-    this.shadowDOM = this.attachShadow({ mode: 'open' });
-  }
-
   set review(review) {
     this._review = review;
     this.render();
   }
 
   render() {
-    this.shadowDOM.innerHTML = `
+    this.innerHTML = `
       <style>
         .card {
           border: 1px solid #000000;

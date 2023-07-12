@@ -1,16 +1,11 @@
 class ItemMenu extends HTMLElement {
-  constructor() {
-    super();
-    this.shadowDOM = this.attachShadow({ mode: 'open' });
-  }
-
   set menu(menu) {
     this._menu = menu;
     this.render();
   }
 
   render() {
-    this.shadowDOM.innerHTML = `
+    this.innerHTML = `
       <style>
         .item-menu {
           color: #000000;

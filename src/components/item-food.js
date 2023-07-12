@@ -1,18 +1,13 @@
 import { BASE_URL_IMAGE } from '../config/api';
 
 class ItemFood extends HTMLElement {
-  constructor() {
-    super();
-    this.shadowDOM = this.attachShadow({ mode: 'open' });
-  }
-
   set food(food) {
     this._food = food;
     this.render();
   }
 
   render() {
-    this.shadowDOM.innerHTML = `
+    this.innerHTML = `
       <style>
         .card {}
 
@@ -48,7 +43,7 @@ class ItemFood extends HTMLElement {
       </style>
 
       <div class="card">
-        <img class="card-image" src="${BASE_URL_IMAGE + this._food.pictureId}" alt="Baner Restaurant ${this._food.name}" />
+        <img class="card-image lazyload" data-src="${BASE_URL_IMAGE + this._food.pictureId}" alt="Baner Restaurant ${this._food.name}" />
 
         <div class="card-body">
           <h2>${this._food.name}</h2>
