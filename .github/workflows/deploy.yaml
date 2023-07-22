@@ -21,6 +21,9 @@ jobs:
       - name: Build site
         run: npm run build
 
+      - name: Build site
+        run: npm run build-image
+
       - name: Deploy site
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
